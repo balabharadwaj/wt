@@ -1,12 +1,12 @@
 <?php
- include ('connection.php');
+ include ('connect.php');
      if($_SERVER["REQUEST_METHOD"]=="POST"){
-       $Name=$_POST["name"];
+       $Username=$_POST["name"];
        $Email=$_POST["email"];
        $Password=$_POST["password"];
         $Phonenumber=$_POST["phone"];
       
-       $qry1="INSERT INTO `info`(`Name`,`Email`, `Password`, `Phonenumber`) VALUES ('$Name','$Email','$Password','$Phonenumber')";
+       $qry1="INSERT INTO `info`(`Username`,`Email`, `Password`, `Phonenumber`) VALUES ('$Username','$Email','$Password','$Phonenumber')";
        $res1=mysqli_query($conn,$qry1);
     }
     else{
@@ -18,7 +18,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Register form</title>
+	<title>Registration form</title>
 
 </head>
 <body>
